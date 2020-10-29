@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,9 +35,14 @@ public class CrudRestController {
 	
 	@GetMapping("/getcarbyid/{id}")
 	public Car fetchCarById(@PathVariable int id){
-		return service.fetchProductById(id).get();
+		return service.fetchCarById(id).get();
 	}
 	
+	@DeleteMapping("/deletecarbyid/{id}")
+	public String DeleteCarById(@PathVariable int id){
+		//return null;
+		return service.deleteCarById(id);
+	}
 	
 	
 	

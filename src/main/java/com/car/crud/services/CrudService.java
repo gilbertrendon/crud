@@ -22,7 +22,18 @@ public class CrudService {
 		return repo.save(car);
 	}
 	
-	public Optional<Car> fetchProductById(int id) {
+	public Optional<Car> fetchCarById(int id) {
 		return repo.findById(id);
+	}
+	
+	public String deleteCarById(int id) {
+		String result;
+		try {
+			repo.deleteById(id);
+			result = "Car succesfully deleted";
+		}catch(Exception e) {
+			result = "Car is not deleted";	
+		}
+		return result;
 	}
 }

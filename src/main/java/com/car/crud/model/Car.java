@@ -12,21 +12,31 @@ public class Car {
 	private double valor;
 	private double aumento;
 	private String finsercion;
+	private boolean habilitado; 
 	
 	
 	public Car(){
 	}
 	
-	public Car(int id, String img, double valor, double aumento, String finsercion){
+	public Car(int id, String img, double valor, double aumento, String finsercion, boolean habilitado){
 		super();
 		this.id = id;
 		this.img = img;
 		this.valor = valor;
 		this.aumento = aumento;
 		this.finsercion = finsercion;
+		this.habilitado = habilitado;
 	}
 	
 	
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		this.habilitado = habilitado;
+	}
+
 	public String getFinsercion() {
 		return finsercion;
 	}
