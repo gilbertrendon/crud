@@ -12,13 +12,14 @@ public class Car {
 	private double valor;
 	private double aumento;
 	private String finsercion;
-	private boolean habilitado; 
+	private boolean habilitado;
+	private String modelo;
 	
 	
 	public Car(){
 	}
 	
-	public Car(int id, String img, double valor, double aumento, String finsercion, boolean habilitado){
+	public Car(int id, String img, double valor, double aumento, String finsercion, boolean habilitado, String modelo){
 		super();
 		this.id = id;
 		this.img = img;
@@ -26,9 +27,18 @@ public class Car {
 		this.aumento = aumento;
 		this.finsercion = finsercion;
 		this.habilitado = habilitado;
+		this.modelo = modelo;
 	}
 	
 	
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
 	public boolean isHabilitado() {
 		return habilitado;
 	}
